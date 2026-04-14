@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>msalahdev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="scanline"></div>
+<div class="cursor" id="cursor"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MS<span>_</span>DEV</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#automations">Automations</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#tools">Tools</a></li>
+  </ul>
+  <a href="#contact" class="nav-contact-btn">Contact</a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#automations">Automations</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+
+  <!-- Floating particles -->
+  <div class="hero-particles">
+    <span class="particle p1"></span>
+    <span class="particle p2"></span>
+    <span class="particle p3"></span>
+    <span class="particle p4"></span>
+    <span class="particle p5"></span>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Available for work
+    </div>
+    <div class="hero-role">Automation Engineer &amp; Frontend Developer</div>
+    <h1 class="hero-name">
+      <span class="name-line">Mohamed</span>
+      <span class="name-line"><span class="name-accent">Salah</span></span>
+    </h1>
+    <p class="hero-tagline">
+      I build smart workflows that run while you sleep —<br>
+      and fast, beautiful interfaces that people love.
+    </p>
+    <div class="hero-cta">
+      <a href="#automations" class="btn-primary btn-shine">View Work →</a>
+      <a href="#contact" class="btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-counter">
+      <div class="counter-item">
+        <span class="counter-num" data-target="15">0</span>
+        <span class="counter-label">Automations</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num" data-target="20">0</span>
+        <span class="counter-label">Projects</span>
+      </div>
+      <div class="counter-item">
+        <span class="counter-num" data-target="3">0</span>
+        <span class="counter-label">Years Exp</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    <span class="scroll-arrow">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M10 3v14M4 11l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </div>
+</section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title" style="margin-bottom:32px;">I turn ideas into<br>working products.</h2>
+      <p>I'm an <em>Automation Engineer</em> who builds smart n8n workflows that connect tools, eliminate manual work, and create intelligent systems that run 24/7.</p>
+      <p>On the other side, I'm a <em>Frontend Developer</em> who specializes in high-performance web interfaces — with a sharp eye for design, animations, and pixel-perfect layouts.</p>
+      <p style="margin-bottom:0;">Currently based in Egypt 🇪🇬, open to <em>remote opportunities</em> worldwide.</p>
+    </div>
+    <div class="about-skills">
+      <div class="skill-card">
+        <div class="skill-icon">🔄</div>
+        <div class="skill-name">n8n Automation</div>
+        <div class="skill-desc">Smart workflows & integrations</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🔗</div>
+        <div class="skill-name">API & Webhooks</div>
+        <div class="skill-desc">Connect any tool to any tool</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚡</div>
+        <div class="skill-name">Frontend Dev</div>
+        <div class="skill-desc">Fast, responsive, pixel-perfect UIs</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🎨</div>
+        <div class="skill-name">UI/UX</div>
+        <div class="skill-desc">Clean design, great experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTOMATIONS -->
+<section id="automations">
+  <div class="section-label">n8n Automation Projects</div>
+  <h2 class="section-title">Automation Projects</h2>
+  <div class="auto-grid">
+
+    <div class="auto-card">
+      <div class="auto-img"><img src="images/auto3.jpg" alt="RAG Chatbot"></div>
+      <div class="auto-flow">
+        <span class="flow-node">Knowledge Base</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Pinecone</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Chat</span>
+      </div>
+      <h3 class="auto-title">RAG Chatbot</h3>
+      <p class="auto-desc">Full RAG pipeline — syncs knowledge from Google Drive, splits & embeds via OpenAI, stores in Pinecone Vector Store, then serves accurate AI answers through a chat interface.</p>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-img"><img src="images/auto2.jpg" alt="WhatsApp Multi-Agent"></div>
+      <span class="auto-badge">Live</span>
+      <div class="auto-flow">
+        <span class="flow-node">Webhook</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Orchestrator</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Text / Voice / Image</span>
+      </div>
+      <h3 class="auto-title">WhatsApp Multi-Agent</h3>
+      <p class="auto-desc">WhatsApp-powered AI system handling Text, Voice & Image — connected to Social Media, Web Search, Email & Calendar agents for complete task automation.</p>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-img"><img src="images/auto5.jpg" alt="Telegram Multi-Agent Bot"></div>
+      <span class="auto-badge">Live</span>
+      <div class="auto-flow">
+        <span class="flow-node">Telegram Trigger</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Orchestrator</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Text / Voice / Image</span>
+      </div>
+      <h3 class="auto-title">Telegram Multi-Agent Bot</h3>
+      <p class="auto-desc">Telegram bot with Orchestrator Agent that routes Text, Voice & Image to dedicated pipelines — powered by OpenAI with memory, Think node, and Facebook Agent integration.</p>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-img"><img src="images/auto8.jpg" alt="HR Automation Agent"></div>
+      <span class="auto-badge">Live</span>
+      <div class="auto-flow">
+        <span class="flow-node">Telegram Trigger</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">GPT_5 Agent</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Gmail / Calendar</span>
+      </div>
+      <h3 class="auto-title">HR Automation Agent</h3>
+      <p class="auto-desc">An AI-powered HR assistant that sends automated emails to employees via Gmail, schedules meetings and creates events in Google Calendar, and reads employee data from Google Sheets — all triggered through Telegram.</p>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-img"><img src="images/auto6.jpg" alt="AI Agent — Grok + Sheets + Gmail"></div>
+      <span class="auto-badge">Live</span>
+      <div class="auto-flow">
+        <span class="flow-node">Chat Trigger</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">AI Agent</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Sheets / Gmail</span>
+      </div>
+      <h3 class="auto-title">AI Agent — Grok + Sheets + Gmail</h3>
+      <p class="auto-desc">A smart AI Agent powered by xAI Grok with memory, connected to Google Sheets for data retrieval and Gmail for automated email sending — all from a single chat trigger.</p>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-img"><img src="images/auto1.jpg" alt="Messenger Multi-Agent"></div>
+      <span class="auto-badge">Live</span>
+      <div class="auto-flow">
+        <span class="flow-node">Webhook</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Orchestrator</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Text / Voice / Image</span>
+      </div>
+      <h3 class="auto-title">Messenger Multi-Agent</h3>
+      <p class="auto-desc">A full-scale multi-agent system via Webhook — handles Text, Voice & Image with an Orchestrator Agent, plus Social Media, Web Search, Email & Calendar sub-agents.</p>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-img"><img src="images/auto4.jpg" alt="Form → AI → Google Sheets"></div>
+      <div class="auto-flow">
+        <span class="flow-node">Form Submit</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">OpenAI</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Sheets</span>
+      </div>
+      <h3 class="auto-title">Form → AI → Google Sheets</h3>
+      <p class="auto-desc">Automated pipeline that captures form submissions, processes them through an OpenAI model, merges the AI response with the original data, and appends everything to Google Sheets.</p>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-img"><img src="images/auto7.jpg" alt="Telegram Video Downloader Bot"></div>
+      <span class="auto-badge">Live</span>
+      <div class="auto-flow">
+        <span class="flow-node">Telegram Trigger</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Switch</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">HTTP Request</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Send Video</span>
+      </div>
+      <h3 class="auto-title">Telegram Video Downloader Bot</h3>
+      <p class="auto-desc">A Telegram bot that downloads videos from Instagram and Facebook. Detects the platform via a Switch node, fetches the video through HTTP Request, and sends it back directly in the chat.</p>
+    </div>
+
+  </div>
+  
+
+<div style="text-align:center; margin-top: 40px;">
+  <a href="https://github.com/mohamedsalah2-ws/n8nprojects/tree/main/n8n%20projects"
+     target="_blank"
+     class="btn-ghost"
+     style="display:inline-flex; align-items:center; gap:10px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+               0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+               -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+               .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+               -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27
+               .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12
+               .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+               0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+    VIEW ALL ON GITHUB
+  </a>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Frontend Work</div>
+  <h2 class="section-title">Selected Projects</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <span class="project-num">/01</span>
+      <div class="project-img"><img src="images/project1.jpg" alt="ALmansoori Website"></div>
+      <span class="project-tag fullstack">Full Stack</span>
+      <h3 class="project-title">ALmansoori Website</h3>
+      <p class="project-desc">Bakhita Al Mansoori Real Estate is a leading real estate brokerage firm in the UAE, built on the values of trust, vision, and excellence. Connecting clients with exceptional investment and residential opportunities.</p>
+      <div class="project-stack">
+        <span class="stack-tag">React.js</span>
+        <span class="stack-tag">Next.js</span>
+        <span class="stack-tag">Node.js</span>
+      </div>
+      <div class="project-links">
+        <a href="https://www.almansooriep.com/" class="project-link" target="_blank" rel="noopener">Live →</a>
+        <a href="#" class="project-link disabled" title="Private repo">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <span class="project-num">/02</span>
+      <div class="project-img"><img src="images/project2.jpg" alt="Elnagdy Website"></div>
+      <span class="project-tag fullstack">Full Stack</span>
+      <h3 class="project-title">Elnagdy Website</h3>
+      <p class="project-desc">EL-NAGDI Services & Trading is a pioneer in providing integrated business solutions, bridging market gaps with innovative, high-quality services that exceed the expectations of local and regional clients.</p>
+      <div class="project-stack">
+        <span class="stack-tag">React</span>
+        <span class="stack-tag">Tailwind</span>
+        <span class="stack-tag">Next.js</span>
+      </div>
+      <div class="project-links">
+        <a href="https://darkseagreen-mosquito-232769.hostingersite.com/" class="project-link" target="_blank" rel="noopener">Live →</a>
+        <a href="#" class="project-link disabled" title="Private repo">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <span class="project-num">/03</span>
+      <div class="project-img"><img src="images/project3.jpg" alt="Ahfad Pharaanah Website"></div>
+      <span class="project-tag frontend">Frontend</span>
+      <h3 class="project-title">Ahfad Pharaanah Website</h3>
+      <p class="project-desc">Ahfad Al-Pharaohs is a luxury interior design firm transforming ordinary spaces into living masterpieces — blending ancient authenticity with modern elegance under the motto: "We design life, not just walls."</p>
+      <div class="project-stack">
+        <span class="stack-tag">HTML</span>
+        <span class="stack-tag">CSS</span>
+        <span class="stack-tag">JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="https://mohamedsalah2-ws.github.io/ahfadpharaanah/" class="project-link" target="_blank" rel="noopener">Live →</a>
+        <a href="https://github.com/mohamedsalah2-ws/ahfadpharaanah" class="project-link" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <span class="project-num">/04</span>
+      <div class="project-img"><img src="images/project4.jpg" alt="Samir Elnagdy Portfolio"></div>
+      <span class="project-tag frontend">Frontend</span>
+      <h3 class="project-title">Samir Elnagdy Portfolio</h3>
+      <p class="project-desc">A dynamic personal website for a multi-skilled professional blending CPA expertise, creative design, and AI. Showcases his unique ability to turn data into decisions and ideas into stunning visuals.</p>
+      <div class="project-stack">
+        <span class="stack-tag">HTML</span>
+        <span class="stack-tag">CSS</span>
+        <span class="stack-tag">JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="https://mohamedsalah2-ws.github.io/samirelnagdi2/#" class="project-link" target="_blank" rel="noopener">Live →</a>
+        <a href="https://github.com/mohamedsalah2-ws/samirelnagdi2" class="project-link" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <span class="project-num">/05</span>
+      <div class="project-img"><img src="images/project5.jpg" alt="Awad ELdarmaki Portfolio"></div>
+      <span class="project-tag frontend">Frontend</span>
+      <h3 class="project-title">Awad ELdarmaki Portfolio</h3>
+      <p class="project-desc">A personal portfolio for a prominent Emirati researcher and writer, highlighting his mission to revive Arab heritage and connect historical wisdom with modern discourse through intellectual content.</p>
+      <div class="project-stack">
+        <span class="stack-tag">HTML</span>
+        <span class="stack-tag">CSS</span>
+        <span class="stack-tag">JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="https://mohamedsalah2-ws.github.io/awaddarmki/" class="project-link" target="_blank" rel="noopener">Live →</a>
+        <a href="https://github.com/mohamedsalah2-ws/awaddarmki" class="project-link" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="section-label">Tech Stack</div>
+  <h2 class="section-title">Tools & Technologies</h2>
+  <div class="tools-wrapper">
+    <div class="tool-item"><span class="tool-icon">⚛️</span><div class="tool-info"><div class="tool-name">React / Next.js</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🟨</span><div class="tool-info"><div class="tool-name">JavaScript</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🎨</span><div class="tool-info"><div class="tool-name">Tailwind CSS</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🅱️</span><div class="tool-info"><div class="tool-name">Bootstrap</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🔷</span><div class="tool-info"><div class="tool-name">TypeScript</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🔄</span><div class="tool-info"><div class="tool-name">n8n</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🤖</span><div class="tool-info"><div class="tool-name">OpenAI API</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🌲</span><div class="tool-info"><div class="tool-name">Pinecone</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🔗</span><div class="tool-info"><div class="tool-name">REST APIs</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🐙</span><div class="tool-info"><div class="tool-name">Git / GitHub</div><div class="tool-level">Advanced</div></div></div>
+    <div class="tool-item"><span class="tool-icon">🐳</span><div class="tool-info"><div class="tool-name">Docker</div><div class="tool-level">Intermediate</div></div></div>
+    <div class="tool-item"><span class="tool-icon">✈️</span><div class="tool-info"><div class="tool-name">Telegram API</div><div class="tool-level">Advanced</div></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label" style="justify-content:center;">Let's Work Together</div>
+  <h2 class="contact-big">Have a project?<br><span>Let's build it.</span></h2>
+  <p class="contact-sub">Whether it's a web app, landing page, or a complex automation — I'm ready to help you ship it fast.</p>
+  <div class="contact-links">
+
+    <a href="mailto:salahatries3@gmail.com" class="contact-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      Email Me
+    </a>
+
+    <a href="https://github.com/mohamedsalah2-ws" class="contact-link" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      GitHub
+    </a>
+
+    <a href="https://www.linkedin.com/in/mohamed-salah-b71a54252" class="contact-link" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
+
+    <a href="tel:+201128864057" class="contact-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Me
+    </a>
+
+  </div>
+  <a href="https://wa.me/201128864057" class="btn-primary" style="font-size:13px; padding:16px 40px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    Start a Conversation →
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-social-wrap">
+    <div class="footer-social-label">Follow my work</div>
+    <div class="footer-socials">
+      <a href="https://wa.me/201128864057" class="social-link" title="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/mohamed.salahatrie" class="social-link" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/mohamed1___salah" class="social-link" title="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/Mohamedsalah52" class="social-link" title="Telegram" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://x.com/M0hamedsalah565" class="social-link" title="X / Twitter" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/mohamed-salah-b71a54252" class="social-link" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.tiktok.com/@mohamed.salah6479" class="social-link" title="TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+  <div class="footer-copy">All rights reserved © 2026 | Designed and developed by Mohamed Salah</div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
