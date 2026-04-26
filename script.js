@@ -258,8 +258,8 @@ const counterObs = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const nums = entry.target.querySelectorAll('.counter-num');
       const data = [
-        { val: 15, suffix: '+' },
         { val: 20, suffix: '+' },
+        { val: 15, suffix: '+' },
         { val: 2,  suffix: '+' },
       ];
       nums.forEach((el, i) => {
