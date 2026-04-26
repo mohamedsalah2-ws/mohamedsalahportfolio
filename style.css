@@ -9,7 +9,7 @@
   --text: #e8e8f0;
   --muted: #5a5a7a;
   --mono: 'Space Mono', monospace;
-  --sans: 'Outfit', sans-serif;
+  --sans: 'Sans', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -85,12 +85,12 @@ nav {
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(16px);
 }
-.nav-logo {
-  font-family: var(--mono);
-  font-size: 13px;
+.nav-logo,
+.nav-logo:hover,
+.nav-logo:visited {
+  text-decoration: none !important;
   color: var(--accent);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  cursor: pointer;
 }
 .nav-links { display: flex; gap: 36px; list-style: none; }
 .nav-links a {
@@ -865,6 +865,3 @@ footer {
   .footer-socials { gap: 6px; }
   .social-link    { width: 34px; height: 34px; font-size: 13px; }
 }
-
-
-
